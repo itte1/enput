@@ -1,6 +1,6 @@
 {
   "name": "enput",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "dotenv file generator from schema and user input",
   "keywords": [
     "env",
