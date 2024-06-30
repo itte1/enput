@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command, Argument, Option } from 'commander'
 
 import { enputAction } from './enput_action.js'
