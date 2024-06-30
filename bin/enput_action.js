@@ -124,7 +124,7 @@ export async function enputAction(args, options) {
 
   let inputedRecords = []
   if (prompts.length) {
-    if (inputs.length) {
+    if (inputs.length && inputs[0].header) {
       inputs[0].header = inputs[0].header.slice(1)
     }
     
