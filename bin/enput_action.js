@@ -161,8 +161,8 @@ export async function enputAction(args, options) {
 
   let schemaLastLine = schemaRecords.length ? schemaRecords[schemaRecords.length - 1].endLine : 1
   newRecords.sort((aNewRecord, bNewRecord) => {
-    let aSchemaRecord = schemaRecords.find(record => record.key === aNewRecord.key)
-    let bSchemaRecord = schemaRecords.find(record => record.key === bNewRecord.key)
+    let aSchemaRecord = schemaRecords.find(record => record.key === aNewRecord.key) || { startLine: 0 }
+    let bSchemaRecord = schemaRecords.find(record => record.key === bNewRecord.key) || { startLine: 0 }
     return (aSchemaRecord ? aSchemaRecord.startLine : (schemaLastLine + aSchemaRecord.startLine)) - (bSchemaRecord ? bSchemaRecord.startLine : (schemaLastLine + bSchemaRecord.startLine))
   })
 
